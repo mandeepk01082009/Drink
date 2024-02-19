@@ -93,6 +93,65 @@
         dots: true,
         nav: false,
     });
+
+    // let sections = document.querySelectorAll('section');
+    // let navLinks = document.querySelectorAll('div nav a');
+    
+    // window.onscroll = () => {
+    //     sections.forEach(sec => {
+    //         let top = window.scrollY;
+    //         let offset = sec.offsetTop;
+    //         let height = sec.offsetHeight;
+    //         let id = sec.getAttribute('id');
+    
+    //         if(top >= offset && top < offset + height){
+    //             navLinks.forEach(link => {
+    //                 link.classList.remove('active');
+    //             });
+    //             document.querySelector('div nav a[href="#' + id + '"]').classList.add('active');
+    //         }
+    //     });
+    // };
+
+    let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('div nav a');
+
+// Function to remove 'active' class from all nav links
+const removeActiveClasses = () => {
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+};
+
+// Scroll Event Listener
+window.onscroll = () => {
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentSection)) {
+            link.classList.add('active');
+        }
+    });
+};
+
+// Click Event Listener for each nav link
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        removeActiveClasses();
+        this.classList.add('active');
+    });
+});
+
+    
     
 })(jQuery);
 

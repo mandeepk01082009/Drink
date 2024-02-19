@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tea House - Tea Shop Website Template</title>
+    <title>Coffee</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -55,7 +55,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="#index" class="nav-item nav-link">Home</a>
+                        <a href="#index" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#product" class="nav-item nav-link">Products</a>
                         <a href="#store" class="nav-item nav-link">Store</a>
@@ -81,12 +81,18 @@
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid px-0 mb-5" id="index">
+    <section id="index">
+    <div class="container-fluid px-0 mb-5" >
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+             <!-- Fixed Text Overlay -->
+    <!--<div class="carousel-caption d-none d-md-block">-->
+    <!--    <h5>Fixed Title</h5>-->
+    <!--    <p>Some representative placeholder content for all slides.</p>-->
+    <!--</div>-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('syrups/img/slider1.webp')}}" alt="Image">
-                    <div class="carousel-caption">
+                    <img class="w-100" src="{{ asset('syrups/img/slider1.jpg')}}" alt="Image">
+                    <!-- <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
@@ -99,11 +105,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('syrups/img/carousel-2.jpg')}}" alt="Image">
-                    <div class="carousel-caption">
+                    <img class="w-100" src="{{ asset('syrups/img/slider2.webp')}}" alt="Image">
+                    <!-- <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
@@ -116,7 +122,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
@@ -129,14 +135,16 @@
             </button>
         </div>
     </div>
+</sectin>
     <!-- Carousel End -->
 
     <!-- Article Start -->
-    <div class="container-xxl py-5" id="about">
+    <section id="about">
+    <div class="container-xxl py-5" >
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <img class="img-fluid" src="{{ asset('syrups/img/contact-us.webp')}}" alt="">
+                    <img class="img-fluid" src="{{ asset('syrups/img/contact.jpg')}}" alt="">
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="section-title">
@@ -178,10 +186,11 @@
             </div>
         </div>
     </div>
+</section>
     <!-- Article End -->
 
-    <!-- Store Start -->
-    <div class="container-xxl py-5" id="product">
+    <section id="product">
+    <div class="container-xxl py-5" >
         <div class="container">
             <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Our Products</p>
@@ -190,8 +199,8 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="{{ asset('syrups/img/product1.webp')}}" alt="">
-                        <strong>Bar syrups</strong>
+                        <img class="img-fluid" src="{{ asset('syrups/img/tp1.jpg')}}" alt="">
+                        <p class="mt-3">Bar syrups</p>
                         <!-- <div class="p-4">
                             <div class="text-center mb-3">
                                 <small class="fa fa-star text-primary"></small>
@@ -211,9 +220,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="{{ asset('syrups/img/product2.webp')}}" alt="">
-                        <strong class="mb-3">Coffee syrups</strong>
+                    <div class="store-item position-relative text-center">    
+                        <img class="img-fluid" src="{{ asset('syrups/img/tp2.jpg')}}" alt="">
+                        <p>Coffee syrups</p>
                         <!-- <div class="p-4">
                             <div class="text-center mb-3">
                                 <small class="fa fa-star text-primary"></small>
@@ -234,7 +243,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="{{ asset('syrups/img/product7.webp')}}" alt="">
+                        <img class="img-fluid" src="{{ asset('syrups/img/tp3.jpg')}}" alt="">
                         <strong class="mb-3">Shakes syrups</strong>
                         <!-- <div class="p-4">
                             <div class="text-center mb-3">
@@ -258,10 +267,12 @@
                 </div>
             </div>
         </div>
+</section>
         <!-- Store End -->
 
         <!-- Article Start -->
-        <div class="container-xxl py-5" id="store">
+        <section id="store">
+        <div class="container-xxl py-5" >
             <div class="container">
                 <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
                     style="max-width: 500px;">
@@ -270,7 +281,9 @@
                 </div>
                 <div class="row g-5">
                     <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('syrups/img/store1.png')}}" alt="">
+                        <div class="mt-5">
+                        <img class="img-fluid" src="{{ asset('syrups/img/tp1.jpg')}}" alt="">
+                        </div>
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="section-title">
@@ -323,7 +336,7 @@
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('syrups/img/store2.avif')}}" alt="">
+                        <img class="img-fluid" src="{{ asset('syrups/img/tp2.jpg')}}" alt="">
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="section-title">
@@ -356,7 +369,7 @@
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('syrups/img/product7.webp')}}" alt="">
+                        <img class="img-fluid" src="{{ asset('syrups/img/tp3.jpg')}}" alt="">
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="section-title">
@@ -382,6 +395,7 @@
             </div>
         </div>
     </div>
+</section>
     
         <!-- Article End -->
 
@@ -390,7 +404,8 @@
 
 
         <!-- Contact Start -->
-        <div class="container-xxl contact py-5" id="contact">
+        <section id="contact">
+        <div class="container-xxl contact py-5" >
             <div class="container">
                 <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
                     style="max-width: 500px;">
@@ -471,6 +486,7 @@
                 </div>
             </div>
         </div>
+</section>
         <!-- Contact End -->
 
 
@@ -512,13 +528,13 @@
                         <p class="mb-1">Sunday</p>
                         <h6 class="text-light">Closed</h6>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-lg-3 col-md-6">
                         <h4 class="text-primary mb-4">Contact us with Whatsapp</h4>
                         <div class="whatsapp">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" target="_blank" href="https://web.whatsapp.com"><i
+                        <a class="btn btn-square rounded-circle me-2" style="color:green; font-size:25px;" target="_blank" href="https://web.whatsapp.com"><i
                             class="fab fa-whatsapp"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                     {{-- <div class="col-lg-3 col-md-6">
                         <h4 class="text-primary mb-4">Newsletter</h4>
                         <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
@@ -552,6 +568,9 @@
         <!-- Copyright End -->
 
 
+        
+          <a class="btn btn-square rounded-circle me-2 whatsapp" style="color:green; font-size:40px;" target="_blank" href="https://web.whatsapp.com"><i
+                            class="fab fa-whatsapp"></i></a>
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
                 class="bi bi-arrow-up"></i></a>

@@ -10,7 +10,7 @@ body{
     --dark: #252C30;
 }
 
-.back-to-top {
+.back-to-top{
     position: fixed;
     display: none;
     right: 30px;
@@ -20,9 +20,10 @@ body{
 
 .whatsapp{
     position: fixed;
-  bottom: 10px;
-  margin-right: auto;
-  margin-left: auto;
+    display: none;
+    right: 20px;
+    bottom: 15rem;
+    z-index: 95;
 }
 
 .fw-medium {
@@ -173,14 +174,19 @@ body{
 
 /*** Header ***/
 .carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
+    position: absolute;
     bottom: 0;
-    display: flex;
-    align-items: center;
-    background: rgba(136, 180, 78, .7);
-    z-index: 1;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    /* Make sure the text doesn't hide on smaller screens */
+    top: 50%;
+    transform: translateY(-50%);
+    /* Center the text vertically */
 }
 
 .carousel-control-prev,
