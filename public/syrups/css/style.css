@@ -5,7 +5,7 @@ body{
 }
 :root {
     --primary: #88B44E;
-    --secondary: #FB9F38;
+    --secondary: #FB9F38;   
     --light: #F5F8F2;
     --dark: #252C30;
 }
@@ -103,19 +103,19 @@ body{
     transition: .5s;
 }
 
-.navbar .navbar-brand {
+/* .navbar .navbar-brand {
     position: absolute;
     padding: 0;
     width: 170px;
     height: 135px;
     top: 0;
     left: 0;
-}
+} */
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
-    color: var(--dark);
+    /* color: white; */
     font-weight: 600;
     text-transform: uppercase;
     outline: none;
@@ -125,6 +125,7 @@ body{
 .navbar .navbar-nav .nav-link.active {
     color: var(--primary);   
 }
+
 
 .navbar .dropdown-toggle::after {
     border: none;
