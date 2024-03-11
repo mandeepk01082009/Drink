@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://www.fontspace.com/aura-seraph-font-f97349">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -48,14 +50,14 @@
         #store ul li {
             font-size: 30px;
             font-family: 'Stencil', sans-serif;
-    font-weight: normal; /* Or use 400 */
+            font-weight: normal;
+            /* Or use 400 */
         }
 
-       #about p {
+        #about p {
             font-size: 30px;
-            font-family: 'Stencil', Aura Serach;
-    /*font-weight: normal;*/
-    /* Or use 400 */
+            /*font-weight: normal;*/
+            /* Or use 400 */
         }
 
         #contact p {
@@ -214,20 +216,42 @@
         .dot {
             font-size: 50px;
         }
+         .coffee_syrups {
+            font-size: 18px;
+            /* Smaller font size for small screens */
+            padding: 4px 8px;
+            word-break: keep-all;
+            /* Prevent word breaking */
+            border: 1px solid;
+            /* Reduce padding */
+            border-radius: 15px;
+            /* Adjust border radius */
+            box-sizing: border-box;
+            border-style:inherit;
+            box-shadow: 2px 3px #abc982;
+;
+            /* Apply universally, as an example */
+            /* Include padding and border in element's total width and height */
+        }
 
-         @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
             /* Adjusts for medium devices and below */
             .coffee_syrups {
-                font-size: 18px;
+                font-size: 15px;
                 /* Smaller font size for small screens */
                 padding: 4px 8px;
-                word-break: keep-all; /* Prevent word breaking */
+                word-break: keep-all;
+                /* Prevent word breaking */
                 border: 1px solid;
                 /* Reduce padding */
                 border-radius: 15px;
                 /* Adjust border radius */
-               box-sizing: border-box; /* Apply universally, as an example */
+                box-sizing: border-box;
+                border-style:inherit;
+                 box-shadow: 2px 3px #abc982;
+;
+                /* Apply universally, as an example */
                 /* Include padding and border in element's total width and height */
             }
         }
@@ -236,31 +260,29 @@
 
             /* Adjusts for small devices */
             .coffee_syrups {
-                font-size: 7px;
-                font-weight:bold;
+                font-size: 15px;
+                font-weight: bold;
                 /* Even smaller font size for phone screens */
-                
+
             }
         }
-        
-         .coffee_syrups {
-                /*font-size: 18px;*/
-                /* Smaller font size for small screens */
-                padding: 4px 8px;
-                word-break: keep-all; /* Prevent word breaking */
-                border: 1px solid;
-                /* Reduce padding */
-                border-radius: 15px;
-                /* Adjust border radius */
-               box-sizing: border-box; /* Apply universally, as an example */
-                /* Include padding and border in element's total width and height */
-            }
+       @media (max-width: 768px) {
+    /* Adjusts for medium devices and below */
+    .syrups {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+
+
+       
     </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
@@ -273,7 +295,8 @@
                 <a href="{{ route('index') }}" class="navbar-logo">
                     <img class="img-fluid" src="{{ asset('syrups/img/logos.png') }}" alt="Logo">
                 </a>
-                <button type="button" id="navbar-button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button type="button" id="navbar-button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -296,13 +319,16 @@
         <div id="header-carousel" class="carousel slide carousel-fade slidercoffee" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('syrups/img/home page1.jpg') }}" data-bs-interval="100" alt="Image">
+                    <img class="w-100" src="{{ asset('syrups/img/home page1.jpg') }}" data-bs-interval="100"
+                        alt="Image">
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('syrups/img/home page 3.jpg') }}" data-bs-interval="100" alt="Image">
+                    <img class="w-100" src="{{ asset('syrups/img/home page 3.jpg') }}" data-bs-interval="100"
+                        alt="Image">
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('syrups/img/home page 2.jpg') }}" data-bs-interval="100" alt="Image">
+                    <img class="w-100" src="{{ asset('syrups/img/home page 2.jpg') }}" data-bs-interval="100"
+                        alt="Image">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
@@ -356,7 +382,8 @@
         <!-- Article Start -->
         <div class="container-xxl py-5 mt-2">
             <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     <h1 class="display-5">About Us</h1>
                 </div>
                 <div class="row mt-4">
@@ -364,7 +391,9 @@
                         <img class="img-fluid" src="{{ asset('syrups/img/coffee_syrup.jpg') }}" alt="">
                     </div>
                     <div class="col-sm-6">
-                        <p>With a long experience in a food industry Quebec waters establish itself as a key Player amongest the beverage the most Innovative part of the industry. Our premium quality syrups blended by masters are perfect balance of finest Ingredients into natural cane sugar syrup
+                        <p>With a long experience in a food industry Quebec waters establish itself as a key Player
+                            amongest the beverage the most Innovative part of the industry. Our premium quality syrups
+                            blended by masters are perfect balance of finest Ingredients into natural cane sugar syrup
                         </p>
                     </div>
 
@@ -379,9 +408,10 @@
     <section id="product">
         <div class="container-xxl">
             <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     {{-- <p class="fs-5 fw-medium text-primary">Our Products</p> --}}
-                    <h1 class="display-5">Our Products</h1>
+                    <h1 class="display-5">Syrups for Beverages</h1>
                 </div>
                 <div class="row mt-5">
                     <div class="col-sm-4">
@@ -407,7 +437,8 @@
     <section id="store">
         <div class="container-xxl py-4">
             <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     {{-- <p class="fs-5 fw-medium text-primary">Avialiable Products</p> --}}
                     {{-- <h1 class="display-5">Menu</h1> --}}
                 </div>
@@ -418,87 +449,121 @@
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="section-title">
                             <!-- <p class="fs-5 fw-medium text-primary">Bar syrups</p>-->
-                            <h3 class="display-6 mx-5 mt-2" style="color:#33adff">Bar syrups</h3>
+                            <h3 class="display-6 syrups" style="color:#33adff">Bar syrups</h3>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Passion fruit</span>
+                        <div class="text-center">
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Passion fruit</div>
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Blue curacao</span>
-                            </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Grenadine</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Grenadine</div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Malt Whiskey</span>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Mojito mint</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Blue curacao</div>
                             </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Green apple</span>
+                            <div class="col-3">    
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Strawberry</span>
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Malt Whiskey</div>
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Peach tea</span>
-                            </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Lemon tea</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Green apple</div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Kiwi</span>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Triplesec</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Mojito mint</div>
                             </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Cucumber</span>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Strawberry</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Lemon tea</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Peach tea</div>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Kiwi</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Cucumber</div>
                             </div>
 
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Watermelon</span>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3"> 
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Black widow</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Triplesec</div>
                             </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Pinacolada</span>
+                            <div class="col-3">
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Rose</span>
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Watermelon</div>
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Green mint</span>
-                            </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Blood orange</span>
-                            </div>
-
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">India masala</span>
-                            </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Pineapple</span>
-                            </div>
-                            <div class="col-4">
-
+                            <div class="col-6">
+                                <div class="coffee_syrups">Pinacolada</div>
                             </div>
                         </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Black widow</div>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Rose</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Blood orange</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Green mint</div>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">India masala</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Pineapple</div>
+                            </div>
+                        </div>
+                    </div>
                         <!-- <div data-wow-delay="0.5s"> -->
                         {{-- <ul>
                                         <li>Passion fruit</li>
@@ -522,7 +587,7 @@
                                         <li>India masala</li>
                                         <li>Pineapple</li>
                             </ul> --}}
-                        <!-- 
+                        <!--
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-6" data-wow-delay="0.1s">
@@ -565,7 +630,7 @@
 
         <!-- Article End -->
 
-        <div class="container-xxl py-2">
+        <div class="container-xxl py-4">
             <div class="container">
                 <div class="row ">
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
@@ -575,33 +640,45 @@
                         <div class="section-title">
                             <!--  <p class="fs-5 fw-medium text-primary">
                                 Coffee syrups</p>-->
-                            <h3 class="display-6 mt-2" style="color:#33adff">
+                            <h3 class="display-6 syrups" style="color:#33adff">
                                 Perfect Syrups for Coffee</h3>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Roasted hazelnut</span>
+                        <div class="text-center">
+                        <div class="row mt-3 p-2">
+                            <div class="col-7">
+                                <div class="coffee_syrups">Roasted hazelnut</div>
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Salted caramel</span>
-                            </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Irish cream</span>
+                            <div class="col-5">
+                                <div class="coffee_syrups">Irish cream</div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Triplesec Grenadine</span>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">     
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">French vanilla</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Salted caramel</div>
                             </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Tiramisu</span>
+                            <div class="col-3">
                             </div>
                         </div>
-
-
+                        <div class="row mt-3 p-2">
+                            <div class="col-7">
+                                <div class="coffee_syrups">Triplesec Grenadine</div>
+                            </div>
+                            <div class="col-5">
+                                <div class="coffee_syrups">Tiramisu</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">French vanilla</div>
+                            </div>
+                            <div class="col-3">        
+                            </div>
+                        </div>
+                        </div>
 
                     </div>
                 </div>
@@ -618,7 +695,7 @@
 
         <!-- Article End -->
 
-        <div class="container-xxl py-2">
+        <div class="container-xxl py-4">
             <div class="container">
                 <div class="row ">
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
@@ -628,43 +705,63 @@
                         <div class="section-title">
                             <!-- <p class="fs-5 fw-medium text-primary">
                                 Shake syrups</p>-->
-                            <h3 class="display-6 mt-2" style="color:#33adff">
+                            <h3 class="display-6 syrups" style="color:#33adff">
                                 Shake syrups</h3>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Bubblegum</span>
+                        <div class="text-center">
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Bubblegum</div>
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Cookies cream</span>
-                            </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Cold coffee</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Cold coffee</div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Rose</span>
+                        
+                        
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
                             </div>
-                            <div class="col-4 mt-5">
-                                <span class="coffee_syrups">Saffron cream</span>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Cookies cream</div>
                             </div>
-                            <div class="col-4">
-                                <span class="coffee_syrups">Shahi kulfi</span>
-                            </div>
-
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <span class="coffee_syrups">Red velvet</span>
-                            </div>
-                            <div class="col-4 mt-5">
-
-                            </div>
-                            <div class="col-4">
-
+                            <div class="col-3">
                             </div>
                         </div>
+                        
+                        
+                        <div class="row mt-3 p-2">
+                            <div class="col-6">
+                                <div class="coffee_syrups">Rose</div>
+                            </div>                            
+                            <div class="col-6">
+                                <div class="coffee_syrups">Shahi kulfi</div>
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">                               
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Saffron cream</div>
+                            </div>
+                            <div class="col-3">                               
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="row mt-3 p-2">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6">
+                                <div class="coffee_syrups">Red velvet</div>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div>
+                        </div>
+                        
 
 
                         <!-- <div data-wow-delay="0.5s">
@@ -692,7 +789,8 @@
     <section id="contact">
         <div class="container-xxl contact py-4">
             <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                    style="max-width: 500px;">
                     {{-- <p class="fs-5 fw-medium text-primary">Contact Us</p> --}}
                     <h1 class="display-4">Let's meet us</h1>
                 </div>
@@ -764,7 +862,10 @@
                     </div> --}}
                     <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="h-100">
-                            <iframe class="w-100 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6810.3163480438525!2d76.33976424318259!3d31.409767847058884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391ace6944a6f5fb%3A0x768302e0b4911d9f!2sIndustrial%20Area%2C%20Mehatpur%2C%20Himachal%20Pradesh%20174315!5e0!3m2!1sen!2sin!4v1708665472733!5m2!1sen!2sin" style="height: 100%; min-height: 300px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe class="w-100 rounded"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6810.3163480438525!2d76.33976424318259!3d31.409767847058884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391ace6944a6f5fb%3A0x768302e0b4911d9f!2sIndustrial%20Area%2C%20Mehatpur%2C%20Himachal%20Pradesh%20174315!5e0!3m2!1sen!2sin!4v1708665472733!5m2!1sen!2sin"
+                                style="height: 100%; min-height: 300px; border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                             {{-- <iframe class="w-100 rounded"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
                                 frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen=""
@@ -794,7 +895,7 @@
 
                         Industrial Area, Mehatpur
                         
-                        Distt. Una, <span class="mx-4">Himachal Pradesh- 174315</span>
+                        Distt. Una, <div class="mx-4">Himachal Pradesh- 174315</span>
                         
                     </p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
@@ -873,12 +974,15 @@
     <!--   href="https://web.whatsapp.com"><i class="fab fa-whatsapp"></i></a>-->
     <!--  <a class="btn btn-lg btn-primary btn-lg-square rounded-circle whatsapp" style="font-size:30px; margin-right: 14px;margin-bottom: -9rem" target="_blank"-->
     <!--href="whatsapp://send?phone=+91 9501084697&text=Hello"><i class="fab fa-whatsapp"></i></a>-->
-    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle whatsapp" style="font-size:30px; margin-right: 14px;margin-bottom: -9rem" target="_blank" href="whatsapp://send?phone=+91 8968220622"><i class="fab fa-whatsapp"></i></a>
+    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle whatsapp"
+        style="font-size:30px; margin-right: 14px;margin-bottom: -9rem" target="_blank"
+        href="whatsapp://send?phone=+91 8968220622"><i class="fab fa-whatsapp"></i></a>
     <!--<a id="whatsapp-link" class="btn btn-lg btn-primary btn-lg-square rounded-circle whatsapp" style="font-size:30px; margin-right: 14px;margin-bottom: -9rem" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>-->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
     {{-- <script>
                 document.addEventListener('DOMContentLoaded', function () {
@@ -900,23 +1004,48 @@
                 });
                 </script> --}}
 
-    <!--                <script>-->
-    <!--  document.addEventListener('DOMContentLoaded', function() {-->
-    <!--    var whatsappURL = '';-->
+    <!--                <script>
+        -- >
+        <
+        !--document.addEventListener('DOMContentLoaded', function() {
+            -- >
+            <
+            !--
+            var whatsappURL = '';
+            -- >
 
-    // Basic mobile detection
-    <!--    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {-->
-    // Mobile URL
-    <!--      whatsappURL = 'whatsapp://send?phone=+919501084697';-->
-    <!--    } else {-->
-    // Web/Desktop URL
-    <!--      whatsappURL = 'https://wa.me/+919501084697';-->
-    <!--    }-->
+            // Basic mobile detection
+            <
+            !--
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                -- >
+                // Mobile URL
+                <
+                !--whatsappURL = 'whatsapp://send?phone=+919501084697';
+                -- >
+                <
+                !--
+            } else {
+                -- >
+                // Web/Desktop URL
+                <
+                !--whatsappURL = 'https://wa.me/+919501084697';
+                -- >
+                <
+                !--
+            }-- >
 
-    // Update the link's href with the determined URL
-    <!--    document.getElementById('whatsapp-link').setAttribute('href', whatsappURL);-->
-    <!--  });-->
-    <!--</script>-->
+            // Update the link's href with the determined URL
+            <
+            !--document.getElementById('whatsapp-link').setAttribute('href', whatsappURL);
+            -- >
+            <
+            !--
+        });
+        -- >
+        <
+        !--
+    </script>-->
 
 
     <script>
