@@ -44,7 +44,8 @@
         }
 
         #product p {
-            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-size: 18px; */
         }
 
         #store ul li {
@@ -101,7 +102,9 @@
         }
 
         .section-title h1 {
-            color: #996633;
+            /* color: #996633; */
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .carousel-caption {
@@ -151,7 +154,7 @@
 
             /* Adjusts for small devices */
             .carousel-caption h6 {
-                font-size: 30px;
+                font-size: 40px;
                 /* Even smaller font size for phone screens */
             }
         }
@@ -216,20 +219,21 @@
         .dot {
             font-size: 50px;
         }
-         .coffee_syrups {
+
+        .coffee_syrups {
+            background-color: rgb(37, 37, 37);
+            /* color: white; */
             font-size: 18px;
             /* Smaller font size for small screens */
             padding: 4px 8px;
             word-break: keep-all;
             /* Prevent word breaking */
-            border: 1px solid;
             /* Reduce padding */
-            border-radius: 15px;
+            /* border-radius: 25px; */
             /* Adjust border radius */
             box-sizing: border-box;
-            border-style:inherit;
-            box-shadow: 2px 3px #abc982;
-;
+            /* border-style:inherit; */
+            /* box-shadow: 2px 3px #abc982; */
             /* Apply universally, as an example */
             /* Include padding and border in element's total width and height */
         }
@@ -238,19 +242,20 @@
 
             /* Adjusts for medium devices and below */
             .coffee_syrups {
-                font-size: 15px;
+                background-color: rgb(37, 37, 37);
+                /* color: white; */
+                border-color: none;
+                font-size: 16px;
                 /* Smaller font size for small screens */
                 padding: 4px 8px;
                 word-break: keep-all;
                 /* Prevent word breaking */
-                border: 1px solid;
                 /* Reduce padding */
-                border-radius: 15px;
                 /* Adjust border radius */
                 box-sizing: border-box;
-                border-style:inherit;
-                 box-shadow: 2px 3px #abc982;
-;
+                /* border-style:inherit; */
+                /* box-shadow: 2px 3px #abc982; */
+                ;
                 /* Apply universally, as an example */
                 /* Include padding and border in element's total width and height */
             }
@@ -260,22 +265,81 @@
 
             /* Adjusts for small devices */
             .coffee_syrups {
+                background-color: rgb(37, 37, 37);
+                /* color: white; */
+                border-color: none;
                 font-size: 15px;
-                font-weight: bold;
-                /* Even smaller font size for phone screens */
+                /* Smaller font size for small screens */
+                padding: 4px 8px;
+                word-break: keep-all;
+                /* Prevent word breaking */
 
+                /* Reduce padding */
+                /* border-radius: 20px; */
+                /* Adjust border radius */
+                box-sizing: border-box;
+                /* border-style:inherit; */
+                /* box-shadow: 2px 3px #abc982; */
+
+                /* Apply universally, as an example */
+                /* Include padding and border in element's total width and height */
             }
         }
-       @media (max-width: 768px) {
-    /* Adjusts for medium devices and below */
-    .syrups {
-        font-size: 20px;
-        margin-top: 20px;
-    }
-}
 
+        @media (max-width: 768px) {
 
-       
+            /* Adjusts for medium devices and below */
+            .syrups {
+                font-size: 20px;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            /* Adjusts for medium devices and below */
+            .syrups {
+                font-size: 20px;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .container,
+            .row,
+            .col-md-12 {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .meetus {
+            background-image: url('{{ asset('syrups/img/background.jpg') }}');
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            height: auto;
+            /* Initial height for larger screens */
+            background-position: center;
+            /* Center the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+
+        /* Increase height in phone view */
+        @media (max-width: 768px) {
+
+            /* Adjust this value based on your needs */
+            .meetus {
+                height: 710px;
+                /* Set a specific height for smaller screens */
+            }
+        }
+
+        /* #contact p {
+            color: #ff0000;
+            font-weight: bold;
+        } */
     </style>
 </head>
 
@@ -319,15 +383,15 @@
         <div id="header-carousel" class="carousel slide carousel-fade slidercoffee" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('syrups/img/home page1.jpg') }}" data-bs-interval="100"
+                    <img class="w-100" src="{{ asset('syrups/img/home page1.jpg') }}" data-bs-interval="50"
                         alt="Image">
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('syrups/img/home page 3.jpg') }}" data-bs-interval="100"
+                    <img class="w-100" src="{{ asset('syrups/img/home page 3.jpg') }}" data-bs-interval="50"
                         alt="Image">
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('syrups/img/home page 2.jpg') }}" data-bs-interval="100"
+                    <img class="w-100" src="{{ asset('syrups/img/home page 2.jpg') }}" data-bs-interval="50"
                         alt="Image">
                 </div>
             </div>
@@ -387,185 +451,203 @@
                     <h1 class="display-5">About Us</h1>
                 </div>
                 <div class="row mt-4">
-                    <div class="col-sm-6">
-                        <img class="img-fluid" src="{{ asset('syrups/img/coffee_syrup.jpg') }}" alt="">
+                    <div class="col-md-12 mt-3">
+                        <img class="w-100 img-fluid" src="{{ asset('syrups/img/about.png') }}" alt="">
                     </div>
-                    <div class="col-sm-6">
-                        <p>With a long experience in a food industry Quebec waters establish itself as a key Player
-                            amongest the beverage the most Innovative part of the industry. Our premium quality syrups
-                            blended by masters are perfect balance of finest Ingredients into natural cane sugar syrup
-                        </p>
-                    </div>
-
-
                 </div>
             </div>
         </div>
+
     </section>
     <!-- Article End -->
 
 
     <section id="product">
-        <div class="container-xxl">
+        <div class="container-xxl py-3">
             <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
-                    style="max-width: 500px;">
-                    {{-- <p class="fs-5 fw-medium text-primary">Our Products</p> --}}
-                    <h1 class="display-5">Syrups for Beverages</h1>
+                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5">Our Quality Assurence</h1>
                 </div>
-                <div class="row mt-5">
-                    <div class="col-sm-4">
-                        <img src="{{ asset('syrups/img/bar_syrups.jpg') }}" class="img-fluid" alt="Image 1">
-                        <p class="mt-3 text-center">Bar syrups</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="w-100 img-fluid" src="{{ asset('syrups/img/naturalcanesugar.png') }}"
+                            alt="">
                     </div>
-                    <div class="col-sm-4">
-                        <img src="{{ asset('syrups/img/COFFEE SYRUPS.png') }}" class="img-fluid" alt="Image 2">
-                        <p class="mt-3 text-center">Coffee syrups</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="{{ asset('syrups/img/shake_syrup.png') }}" class="img-fluid" alt="Image 3">
-                        <p class="mt-3 text-center">Shake syrups</p>
-                    </div>
-                    <!-- Add more columns here if needed -->
+                    <p class="text-center">At Quebec Waters Quality is a key component using only Natural Cane Sugar
+                        processed by state of
+                        the art 2 Stage Filtration System Infused with finest Ingredients which let you elevate your
+                        experience of enjoying your favourite drink. </p>
                 </div>
             </div>
         </div>
+        {{-- <div class="container-xxl">
+        <div class="container">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                style="max-width: 500px;">
+                <h1 class="display-5">Syrups for Beverages</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-4 text-center">
+                     <a href="#bar_syrups">
+                    <img src="{{ asset('syrups/img/bar_syrups.jpg') }}" class="img-fluid" alt="Bar Syrups">
+                    <p class="mt-3">Bar syrups</p>
+                    </a>
+                </div>
+               
+                <div class="col-sm-4 text-center">
+                     <a href="#coffeeSyrup">
+                    <img src="{{ asset('syrups/img/COFFEE SYRUPS.png') }}" class="img-fluid" alt="Coffee Syrups">
+                    <p class="mt-3">Coffee syrups</p>
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                     <a href="#shakeSyrup">
+                    <img src="{{ asset('syrups/img/shake_syrup.png') }}" class="img-fluid" alt="Shake Syrups">
+                    <p class="mt-3">Shake syrups</p>
+                    </a>
+                </div>
+                <!-- Add more columns here if needed -->
+            </div>
+        </div>
+    </div> --}}
     </section>
+
     <!-- Store End -->
 
     <!-- Article Start -->
     <section id="store">
-        <div class="container-xxl py-4">
-            <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
-                    style="max-width: 500px;">
-                    {{-- <p class="fs-5 fw-medium text-primary">Avialiable Products</p> --}}
-                    {{-- <h1 class="display-5">Menu</h1> --}}
-                </div>
-                <div class="row mt-3">
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('syrups/img/bar_syrups.jpg') }}" alt="">
+        <div id="bar_syrups">
+            <div class="container-xxl py-4">
+                <div class="container">
+                    <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+                        {{-- <p class="fs-5 fw-medium text-primary">Avialiable Products</p> --}}
+                        <h1 class="display-5">Mocktail Syrups</h1>
                     </div>
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <!-- <p class="fs-5 fw-medium text-primary">Bar syrups</p>-->
-                            <h3 class="display-6 syrups" style="color:#33adff">Bar syrups</h3>
+                    <div class="row py-2 mt-3">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="{{ asset('syrups/img/moctail_syrups.png') }}"
+                                alt="">
                         </div>
-                        <div class="text-center">
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Passion fruit</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Grenadine</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Blue curacao</div>
-                            </div>
-                            <div class="col-3">    
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Malt Whiskey</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Green apple</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Mojito mint</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Strawberry</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Lemon tea</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Peach tea</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Kiwi</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Cucumber</div>
-                            </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            {{-- <div class="section-title">
+                                <!-- <p class="fs-5 fw-medium text-primary">Bar syrups</p>-->
+                                <h3 class="display-6 syrups" style="color:#33adff">Bar syrups</h3>
+                            </div> --}}
+                            <div class="text-center">
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Passion fruit</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Grenadine</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Blue curacao</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Malt Whiskey</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Green apple</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Mojito mint</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Strawberry</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Lemon tea</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Peach tea</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Kiwi</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Cucumber</div>
+                                    </div>
 
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3"> 
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Triplesec</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Watermelon</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Pinacolada</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Black widow</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Rose</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Blood orange</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Green mint</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">India masala</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Pineapple</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Triplesec</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Watermelon</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Pinacolada</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Black widow</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Rose</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Blood orange</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Green mint</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">India masala</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Pineapple</div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- <div data-wow-delay="0.5s"> -->
-                        {{-- <ul>
+                            <!-- <div data-wow-delay="0.5s"> -->
+                            {{-- <ul>
                                         <li>Passion fruit</li>
                                         <li>Blue curacao</li>
                                         <li>Grenadine</li>
@@ -587,7 +669,7 @@
                                         <li>India masala</li>
                                         <li>Pineapple</li>
                             </ul> --}}
-                        <!--
+                            <!--
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-6" data-wow-delay="0.1s">
@@ -621,65 +703,72 @@
                                     </div>
                                 </div>
                             </div> -->
-                        <!-- </div> -->
+                            <!-- </div> -->
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Article End -->
-
-        <div class="container-xxl py-4">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('syrups/img/COFFEE SYRUPS.png') }}" alt="">
+        <div id="coffeeSyrup">
+            <div class="container-xxl py-4">
+                <div class="container">
+                    <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                        style="max-width: 500px;">
+                        {{-- <p class="fs-5 fw-medium text-primary">Avialiable Products</p> --}}
+                        <h1 class="display-5">Coffee Syrups</h1>
                     </div>
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <!--  <p class="fs-5 fw-medium text-primary">
+                    <div class="row py-2 mt-3">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="{{ asset('syrups/img/coffee_syrups.png') }}" alt="">
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            {{-- <div class="section-title">
+                                <!--  <p class="fs-5 fw-medium text-primary">
                                 Coffee syrups</p>-->
-                            <h3 class="display-6 syrups" style="color:#33adff">
-                                Perfect Syrups for Coffee</h3>
-                        </div>
-                        <div class="text-center">
-                        <div class="row mt-3 p-2">
-                            <div class="col-7">
-                                <div class="coffee_syrups">Roasted hazelnut</div>
+                                <h3 class="display-6 syrups" style="color:#33adff">
+                                    Perfect Syrups for Coffee</h3>
+                            </div> --}}
+                            <div class="text-center">
+                                <div class="row mt-3 p-2">
+                                    <div class="col-7">
+                                        <div class="coffee_syrups">Roasted hazelnut</div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="coffee_syrups">Irish cream</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Salted caramel</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-8">
+                                        <div class="coffee_syrups">Triplesec Grenadine</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="coffee_syrups">Tiramisu</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">French vanilla</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-5">
-                                <div class="coffee_syrups">Irish cream</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">     
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Salted caramel</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-7">
-                                <div class="coffee_syrups">Triplesec Grenadine</div>
-                            </div>
-                            <div class="col-5">
-                                <div class="coffee_syrups">Tiramisu</div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">French vanilla</div>
-                            </div>
-                            <div class="col-3">        
-                            </div>
-                        </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -694,77 +783,82 @@
                             </ul> -->
 
         <!-- Article End -->
-
-        <div class="container-xxl py-4">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('syrups/img/shake_syrup.png') }}" alt="">
+        <div id="shakeSyrup">
+            <div class="container-xxl py-4">
+                <div class="container">
+                    <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s"
+                        style="max-width: 500px;">
+                        {{-- <p class="fs-5 fw-medium text-primary">Avialiable Products</p> --}}
+                        <h1 class="display-5">Shake Syrups</h1>
                     </div>
-                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <!-- <p class="fs-5 fw-medium text-primary">
+                    <div class="row py-2 mt-3">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="{{ asset('syrups/img/shake_syrups.png') }}" alt="">
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            {{-- <div class="section-title">
+                                <!-- <p class="fs-5 fw-medium text-primary">
                                 Shake syrups</p>-->
-                            <h3 class="display-6 syrups" style="color:#33adff">
-                                Shake syrups</h3>
-                        </div>
-                        <div class="text-center">
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Bubblegum</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Cold coffee</div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Cookies cream</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="row mt-3 p-2">
-                            <div class="col-6">
-                                <div class="coffee_syrups">Rose</div>
-                            </div>                            
-                            <div class="col-6">
-                                <div class="coffee_syrups">Shahi kulfi</div>
-                            </div>
-                        </div>
-                       
-                        
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">                               
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Saffron cream</div>
-                            </div>
-                            <div class="col-3">                               
-                            </div>
-                        </div>
-                       
-                        
-                        <div class="row mt-3 p-2">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-6">
-                                <div class="coffee_syrups">Red velvet</div>
-                            </div>
-                            <div class="col-3">
-                            </div>
-                        </div>
-                        </div>
-                        
+                                <h3 class="display-6 syrups" style="color:#33adff">
+                                    Shake syrups</h3>
+                            </div> --}}
+                            <div class="text-center">
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Bubblegum</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Cold coffee</div>
+                                    </div>
+                                </div>
 
 
-                        <!-- <div data-wow-delay="0.5s">
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Cookies cream</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-3 p-2">
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Rose</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Shahi kulfi</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Saffron cream</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-3 p-2">
+                                    <div class="col-3">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="coffee_syrups">Red velvet</div>
+                                    </div>
+                                    <div class="col-3">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- <div data-wow-delay="0.5s">
                             <ul>
                                 <li>Bubblegum</li>
                                 <li>Cookies cream</li>
@@ -777,6 +871,7 @@
                             </ul>
                         </div> -->
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -794,7 +889,7 @@
                     {{-- <p class="fs-5 fw-medium text-primary">Contact Us</p> --}}
                     <h1 class="display-4">Let's meet us</h1>
                 </div>
-                <div class="row g-5 mb-5 mt-2">
+                <div class="row g-5 mb-5 mt-2 meetus">
                     <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
                         <div class="btn-square mx-auto mb-3">
                             <i class="fa fa-envelope fa-2x text-white"></i>
